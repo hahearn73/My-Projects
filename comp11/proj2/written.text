@@ -1,0 +1,71 @@
+Project 2
+written.text
+
+Name: Harry Ahearn
+Login ID: hahear01
+
+
+Written #1:  How much time I spent on this assignment
+-----------------------------------------------------
+
+Please estimate of the amount of time you spent on this assignment
+(each week) in hours, e. g., 6.5 hours.  Be as accurate as you can,
+but we know you are not keeping a timer going: just give your best
+estimate.
+
+Week 1 time: 8 hours
+Week 2 time: 3 hours
+
+
+Written #2:  How I tested my code
+---------------------------------
+Week 1 testing: 
+To test wordfreq0.cpp, I used ./wordfreq0 < compile_wfltest just to see if basic
+functionality was working. Next, I ran ./wordfreq0 and then input a bunch of 
+random characters as a word and identified if there were any bugs. The code
+seemed to pretty much work and I spent about 10 minutes giving all sorts of 
+inputs and characters to see what would be output and found no discrepancies 
+with the expected functionality. 
+
+To test the rest of the project for this week. I first made the count command
+and tested that I could add a word in any part of the list. This took the long-
+est of the testing as it required proofing for multiple edge cases. These 
+include adding a word with no list existing, adding a word when list size is 1,
+when list size is greater than 1 and when the word should go at the end of
+the list. After this, I tested the coded in a way for the count command to add
+1 to the frequency of words and I tested the same edge cases and it worked.
+Next, I tested the remove command by remove words from the beginning middle and
+end until the function worked. I also would use the size and get commands 
+throughout testing the other functions. The only bug I found was that when 
+removing the final node in the list, I forgot to set the size to 0 which caused
+a segfault when adding nodes back to the list. 
+
+Week 2 testing:
+
+To test the BinnedWordFreqList.cpp file and the wordfreq.cpp file, I ran them
+with multiple inputs and compared their outputs to expected outputs using diff 
+testing. For both files, this worked with the first 2 files I tried and diff
+testing reported no problems so I moved onto timing my programs.
+
+Written #3:  Timing
+-------------------
+(You will do this in week 2.  Leave it blank in week 1.)
+
+Use the "/usr/bin/time -p" command as shown in the assignment.  You
+may use some novels I downloaded from Project Gutenberg and placed in
+/comp/11/files/novels.
+
+Run both versions of your program (wordfreq1 and wordfreq2) on
+AliceInWonderland.txt and two other reasonably large files of your
+choice.  If you choose something that isn't one of the novels, tell us
+what the file was and how big it is.  E. g., show the output of the
+"wc" program on it ("wc" will count lines, "words," and characters in
+the file).
+
+Take the "user" times and enter them in the table below for
+AlicInWonderland.txt and your two other files.
+
+
+              AliceInWonderLand    WarAndPeace.txt   Ulysses.txt
+wordfreq1            1.82               307.64        182.45
+wordfreq2            0.19               17.54         13.71

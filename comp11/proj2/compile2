@@ -1,0 +1,12 @@
+#!/bin/sh
+###
+### Build wordfreq1, the version that uses the simple word-frequency lists
+### To do this, copy the simple .h file into place, so wordfreq.cpp
+### will use that implementation, and then compile and link with the
+### correspoding .cpp file.
+###
+
+cp BinnedWordFreqList.h WordFreqList.h
+
+g++ -Wall -Wextra -std=c++11 -g -o wordfreq2 \
+    wordfreq.cpp WordFreqLinkedList.cpp BinnedWordFreqList.cpp
