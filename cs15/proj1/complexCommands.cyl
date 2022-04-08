@@ -1,0 +1,40 @@
+% Harry Ahearn complexCommands.cyl CalcYouLater 10/26/21
+% rstring testing 
+{ 1 2 3 + + } print 
+{ 1 { 3 { 54 + { * / { 3 } { 45 + } } } } } print
+{ } print
+{ file.cylc } print clear
+
+% exec testing 
+{ 1 2 + } exec print clear % should print 3
+{ 1 2 > } exec print clear % should print false
+2 { 100 + } exec print clear % should print 102
+2 { 100 - } exec print clear % should print -98
+{ 1 2 + { 3 { * } } } exec print swap print clear
+% should print the nested r string then print 3
+% { { quit } exec 5 5 + } exec % when not commented out it quits as it should
+
+% if testing
+clear
+2
+#t { 3 + } { 2 * } if print % should print 5
+drop drop % throws error signifying the stack does not keep excess datum
+3 4 <
+{ #t } { #f } if print % should output true
+clear 
+3 4 <
+{ #f } { #t } if print % should output false
+clear 
+% nested ifs 
+4 dup 10 ==
+{ 1 0 / }
+{ 6 + dup 10 < { 10 > } { 10 == } if }
+if
+print clear % should print true
+
+% file testing
+5
+{ fact.cylc } file
+print % should print 120
+5 print % shows that input can still be taken after the file command is called
+quit % works the same whether commented out or not 

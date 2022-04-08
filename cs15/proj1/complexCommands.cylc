@@ -1,0 +1,29 @@
+{ 1 2 3 + + } print 
+{ 1 { 3 { 54 + { * / { 3 } { 45 + } } } } } print
+{ } print
+{ file.cylc } print clear
+{ 1 2 + } exec print clear
+{ 1 2 > } exec print clear
+2 { 100 + } exec print clear
+2 { 100 - } exec print clear
+{ 1 2 + { 3 { * } } } exec print swap print clear
+clear
+2
+#t { 3 + } { 2 * } if print
+drop drop
+3 4 <
+{ #t } { #f } if print
+clear 
+3 4 <
+{ #f } { #t } if print
+clear 
+4 dup 10 ==
+{ 1 0 / }
+{ 6 + dup 10 < { 10 > } { 10 == } if }
+if
+print clear
+5
+{ fact.cylc } file
+print
+5 print
+quit

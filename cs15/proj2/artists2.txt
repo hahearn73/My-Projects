@@ -1,0 +1,12 @@
+A
+song1
+song2
+song3
+*
+B
+song2
+song3
+*
+C
+song1
+song3

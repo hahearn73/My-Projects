@@ -1,0 +1,30 @@
+not
+Kanye West
+Adele
+*
+not
+Kanye West
+Adele
+Kanye West
+*
+bfs
+Kanye West
+Adele
+not
+Kanye West
+Adele
+Bruno Mars
+*
+not
+Artist_test
+Kanye West
+*
+not
+Kanye West
+P!nk
+Khalid
+*
+not
+Kanye West
+P!nk
+Khalid

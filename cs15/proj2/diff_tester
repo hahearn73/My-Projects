@@ -1,0 +1,18 @@
+#requires the_SixDegrees and SixDegrees to be present
+./the_SixDegrees artists.txt basic_commands_test.txt modeloutput.txt
+./SixDegrees artists.txt basic_commands_test.txt myoutput.txt
+diff myoutput.txt modeloutput.txt
+./the_SixDegrees artists.txt dfs_test.txt modeloutput.txt
+./SixDegrees artists.txt dfs_test.txt myoutput.txt
+diff myoutput.txt modeloutput.txt
+./the_SixDegrees artists.txt bfs_test.txt modeloutput.txt
+./SixDegrees artists.txt bfs_test.txt myoutput.txt
+diff myoutput.txt modeloutput.txt
+./the_SixDegrees artists.txt not_test.txt modeloutput.txt
+./SixDegrees artists.txt not_test.txt myoutput.txt
+diff myoutput.txt modeloutput.txt
+./the_SixDegrees artists.txt quit_test.txt modeloutput.txt
+./SixDegrees artists.txt quit_test.txt myoutput.txt
+diff myoutput.txt modeloutput.txt
+rm myoutput.txt
+rm modeloutput.txt

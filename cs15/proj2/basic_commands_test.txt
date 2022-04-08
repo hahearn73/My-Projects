@@ -1,0 +1,52 @@
+print
+bfs
+Kanye West
+asdfaasgasdasdfg
+bfs
+Kanye Westerson
+asdfaasgasdasdfg
+bfs
+asdfaasgasdasdfg
+Kanye West
+dfs
+Kanye West
+asdfaasgasdasdfg
+dfs
+Kanye Westerson
+asdfaasgasdasdfg
+dfs
+asdfaasgasdasdfg
+Kanye West
+not
+Kanye West 
+Aasfasf---------
+asdfaasgasdasdfg
+Ye
+Boston
+*
+not
+Kanye West
+Adele
+asdf
+*
+not
+Kanye Westerson
+Adele
+Elton John
+*
+not
+Kanye Westerson
+Adeled
+Elton John
+*
+not
+Kanye West
+Adeled
+Elton John
+*
+not
+Kanye Westerson
+Adeled
+Elton Johndale
+*
+not

@@ -1,0 +1,139 @@
+A: Name and Title of project
+Harry Ahearn CalcYouLater
+
+B: The purpose of the program
+The purpose of the program is to implement a calculator that uses 
+reverse polish notation. This program can accept input from the command line,
+from outside files using the file command and from files directly by calling
+./CalcYouLater < FILENAME.cylc
+
+C: Acknowledgements
+The TAs during the checkoff were very helpful in helping me visualize the 
+run function intuitively.
+
+D: list of all files submitted and description of them
+
+DatumStack.h - interface of the DatumStack class. Outlines all functions and 
+private member variables used in the DatumStack class. This class requires 
+the Datum class to be instantiated in the folder it is in to work correctly.
+
+DatumStack.cpp - this is the implementation of the DatumStack.h interface. It
+uses a vector to model a stack of type Datum and is essentially a wrapper for 
+the vector it holds. 
+
+RPNCalc.h - interface for the RPNCalc class. It contains the public functions:
+the constructor, the destructor, and run. Run will call other functions in order
+to successfully implement a command loop. These functions are all private and 
+the only persistent data within the class is the private member variable of
+type DatumStack.
+
+RPNCalc.cpp - this is the implementation of the RPNCalc class. It implememnts 
+the run function to be a command loop that reads in input from a file or the 
+terminal as a stream. This input is passed to other functions to determine what
+the desired function is. The desired function is then called and the program 
+returns to run and restarts the loop unless the program is quit by an eof or
+a quit command.
+
+main.cpp - this is the driver for the program. It creates an RPNCalc object and
+calls the run function on it. 
+
+Makefile - this file compiles and links all necessary files to create a program
+called CalcYouLater which is the main program in this project. It also creates
+a file called DatumStack_test which is used to test the DatumStack class.
+
+parser.cpp - this file is contains the function parseRString which is used by
+the RPNCalc class. This functions take in an istream and returns a string 
+to be passed onto a Datum object and stored in RPNCalc's DatumStack as an
+RString.
+
+DatumStack_test.cpp - this is the testing cpp file used to test the DatumStack
+class. It creates a DatumStack object and performs several functions on it and 
+compares them to expected output. If any inaccuracies are detected an error 
+message is thrown to cerr.
+
+README - this file describes several aspects of the program such as its testing 
+and all files that make up the final product.
+
+E: How to compile and run program
+This program can be compiled by calling make in the terminal. To run the
+program, call ./CalcYouLater [< FILENAME.cylc]
+Cylc files can be constructed by calling ./cylc FIILENAME.cyl but are optional
+when running ./CalcYouLater hence the [].
+
+F: Data structures used
+The main data structure used for this project was the stack. This was
+implemented using an std::vector which comes with preset functions for push, 
+drop, top which are useful for stacks. A stack was very useful for this project
+because the notation used in the design of the calculator, which was reverse 
+polish notation, fits very neatly onto a stack. In reverse polish notation, it 
+is useful knowing what the last instruction or number was. This is the exact 
+purpose of a stack, to tell you what was last added to a list.
+
+For example, in RPN, the phrase "3 2 +" can be thought of as adding 3 to a stack
+then 2 to the stack, and then popping them off the stack once you see the + and
+adding them together. Finally, just push the result, 5, back onto the stack.
+
+In short, because RPN requires a Last In First Out data structure, the stack was
+very intuitive to use.
+
+Another case where a stack could be useful is in a list that the user can pick 
+from. This could be anything from call logs on a cell phone to most recently 
+played songs on a music player. Because these applications have a bias towards 
+the most recent event (in the case of a call log, you are more likely to call 
+the most recent person you called; in a music player you are likely to listen
+the top few songs until they fall out of favor) a stack is intuitive to 
+implement for the programmer and intuitive to use and traverse for the user.
+In both cases, the top few items can be popped off the stack and displayed and 
+more items can be popped and displayed as the user scrolls thru the displayed 
+list.
+
+Another case where a stack would be useful would be the undo function in text 
+editors. Every change is pushed onto the stack, and whenever the user presses
+undo, the change is popped from the stack and the editor reverses the change. 
+The stack is very useful in this case because, again, the most recent event is
+what matters. People do not undo in large chunks of, and if they need to do that
+highlighting a paragraph and deleting it is easier than pressing undo x times.
+Rather, if they want their sentence to look the way it did before they make a
+few tweaks just to compare to a previous version, popping off the last few 
+changes from the stack and reversing them is much easier than using something 
+like a queue and much less memory intensive than saving each unique text file 
+and displaying the most previous version when undo is pressed. 
+
+G: Testing
+I had 2 stages of testing for this project. For the DatumStack class, I tested
+using a main function DatumStack_test.cpp. In the main function in this file,
+I called all functions available to the DatumStack class and tested their output
+to expected values. This was rather simple as the expected values were fairly
+straightforward to compute by hand as the interface is easy to understand. If 
+any incorrect values were detected by the function, it printed to cerr. I would 
+then check to see which items failed and usually the case was a missing 
+character here or there that I would have to add in to make the logic of the 
+class work as it should. I did something similar for parser.cpp. I added a main 
+function to parser.cpp itself which I commented out after testing was done. 
+In this main function, I passed several istringstreams to the parseRString
+function and printed out the resulting returned string from parseRString to
+cout. I then checked the output for accuracy and would tweak my parseRString
+function until I got the correct output. For the most part, it was correct 
+from the start, but I did have to tweak for a few edge cases so that they would
+match the theCalcYouLater desired output for their RStrings. 
+
+The second stage of testing occurred throughout the making or RPNCalc.
+Throughout the making of RPNCalc, I had a cyl file that I would add to and 
+compile to a cylc file to test the class's function. For each function that was 
+added, I would a new section in the file and run ./CalcYouLater < ATestFile.cylc
+and check for the desired output which would be written in comments in 
+ATestFile.cyl. Because of the complexity of RPNCalc as a whole, some testing was
+done by just running commands in the terminal after calling ./CalcYouLater.
+However, the tests done this way were then put into the cyl file later after I
+had completed most of any given function for more formal testing. For the 
+complex commands, I used known inputs and outputs from the spec for the if 
+command because the if command can be very complex and I wanted a really 
+complicated input with a known output so that I could match the spec as best 
+as possible. This was a very good strategy as I actually had a working if 
+command for simple statements that did not work for the input on the spec. 
+By testing it using cyl files and the input from the spec I found a few major 
+bugs that were only prevalent on really complex cases and I was able to get 
+rid of them as a result.
+
+After this was done, I separated ATestFile.cyl into simpleCommands.cyl and 
+compledCommands.cyl for clarity. 
