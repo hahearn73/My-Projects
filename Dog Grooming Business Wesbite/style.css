@@ -1,0 +1,8 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif; background-color:#08bac7;
+  }
+  ul.nav {font-family: Verdana; text-align: center; list-style-type: none; margin: 0; padding: 0; overflow: 		hidden; background-color: #333333;}
+	li.nav {float: left;}
+	li.nav a {display: block; color: white; text-align: center; padding: 16px; text-decoration: none;}
+	li.nav a:hover {background-color: #111111;}
+  h1 {margin: 5px;text-align: center;}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+        
+    </script>
+    
+    <div class = "logo">
+        <a href = "homepage.html"><img src = "logo.png" style = "width: 90px" "height = 90px"></a>
+    </div>
+    
+    
+    <ul class="nav">
+  		<li class="nav"><a href="contact.html">Contact</a></li>
+    	<li class="nav"><a href="faq.html">FAQ</a></li>
+    	<li class="nav"><a href="services.html">Services</a></li>
+    	<li class="nav"><a href="careers.html">Careers</a></li>
+    	<li class="nav"><a href="events.html">Events</a></li>
+    	<li class="nav"><a href="about.html">About Us</a></li>
+        <li class="nav"><a href="homepage.html">Home</a></li>  
+	</ul>
+    
+    <header class = "headerimage">
+        <img src="background2.jpg" id = "cover">
+        <div class ="headtext">
+            <h1>PAW FRIENDS GROOMING SERVICES</h1> 
+        </div>
+        
+        <div class = "homebtns">
+            <a href = "services.html"><button class="button homepage">Book An Appointment</button></a>
+            <a href = "about.html"><button class="button homepage">Learn More</button></a>
+        </div>
+    </header>
+
+    <style>
+        body {
+           background-color: white;
+        }
+        ul.nav {font-family: Verdana; text-align: center; list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: white;}
+        li.nav {float: right}
+        li.nav a {display: block; color: black; text-align: center; padding: 16px; text-decoration: none;}
+        li.nav a:hover {background-color: #CED8E8;}
+        h1 {margin: 5px;text-align: center;}
+    </style>
+    
+    <div class="row">
+            <div class="column one">
+                <img src="paws.png" width="100">
+                <h2>Grooming Services</h2>
+                <p id = "coltext">We offer brushing, bathing, and haircut services! We cater to all sorts of breeds and ensure your dog feels comfortable and is pampered! Nail trimming, teeth brushing, and ear cleaning services are also available. Walk in services begin at $25 while bookings have a 5% discount off your total billing!&nbsp;&nbsp;&nbsp;</p> 
+                <a href="services.html"><button class="button">Learn More</button></a>
+            </div>
+            
+            <div class="column two">
+                <img src="heart.png" width ="100">
+                <h2>Daycare</h2>
+                <p id = "coltext">Planning for a busy day or just want your furry kid to have a fun time? Our center has lots of outdoor space for your dog to play, where our certified staff are here to make them feel loved. Spend a day with us to have your dog make new friends, learn new tricks, or get lots of belly rubs! Your dog deserves only the best care.</p>
+                <a href="services.html"><button class="button">Learn More</button></a>
+            </div>
+            
+            <div class="column three">
+                <img src = "training.png" width = "100">
+                <h2>Grooming Seminars</h2>
+                <p id = "coltext">Are you aspring to become a professional groomer? Check our our upcoming events page for opportunities to get trained with us! Or feeling drawn to our mission and vision at Paw Friends? We're always looking for enthusiastic dog lovers to come work with us. Check our our careers page for more information.</p>
+                <a href="careers.html"><button class="button">Learn More</button></a>
+            </div>
+        </div>
+    
+    <body>
+        <!-- blowdryer, wash2, towel2
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade block">
+            <div class="numbertext">1 / 3</div>
+            <img src="blowdryer.jpg" style="width:100%">
+            <div class="text">Best Grooming Services Available in Medford</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="wash2.jpg" style="width:100%">
+            <div class="text">50% off on your dog's birthday!</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="towel2.jpg" style="width:100%">
+            <div class="text">We take the best care</div>
+        </div>
+            
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    
+        <footer>
+            <p>© 2022 Paw Friends Grooming Services</p>
+        </footer>
+        
+    </body>
+    
+</html>

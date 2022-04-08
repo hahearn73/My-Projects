@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+    <head>
+        <title>Services</title>
+        <meta name="keywords" content="dogs, dog grooming, dogs medford, 
+        dog teeth cleaning, dog bath"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="styles.css">
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+    ul.nav {font-family: Verdana; text-align: center; list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: white;}
+    li.nav {float: right}
+    li.nav a {display: block; color: black; text-align: center; padding: 16px; text-decoration: none;}
+    li.nav a:hover {background-color: #CED8E8;}
+  h1 {
+      text-align: center;
+      font-size: 36px;
+      margin: 5px;
+  }
+  .opener {
+      padding-top: 20px;
+      font-size: 30px; 
+      text-align: center;
+    }
+  form {
+      text-align: center;
+  }
+  ul.titles{
+      text-align: center;
+  }
+  li.titles{
+      display: inline-block;
+      margin: 80px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+  }
+  .service_type{
+      width: 200px;
+      height: 200px;
+      margin: 30px;
+  }
+  .service_type:hover{
+      border: solid;
+  }
+  .services{
+      margin: 0 auto;
+     display: table;
+      
+  }
+  .bookBtn{
+      border: solid 1px #00008B;
+      padding: 3px;
+      margin: 30px;
+      weight: 60px;
+      height: 30px;
+      display: inline-block;
+      text-align: center;
+
+  }
+  .bookBtn:hover{
+      background-color: rgba(0, 0, 205, .7);
+      font-weight: bold;
+  }
+  .question_service {
+      display: inline;
+      font-size: 30px; 
+      text-align: center;
+  }
+  .questionService {
+      text-align: center;
+      display: none;
+      padding-top: 20px;
+      margin-top: 40px;
+  }
+  .times{
+      display: none;
+      margin-top: 10px;
+      
+  }
+  .dogForm{
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  .confirmation {
+      margin-left: 10px;
+  }
+  
+  @media screen and (max-width: 480px) {
+  
+  .bookBtn{
+      width: 20%;
+      height: 6vh;
+      margin-left: 0;
+  }
+  .confirmation {
+      width: 30%;
+  }
+  [name$= "schedule"]{
+      width: 20%;
+  }
+  
+ }
+
+</style>
+<div class = "logo">
+    <a href = "homepage.html"><img src = "logo.png" style = "width: 90px" "height = 90px"></a>
+</div>
+<ul class="nav"> 
+    <li class="nav"><a href="contact.html">Contact</a></li>
+    <li class="nav"><a href="faq.html">FAQ</a></li>
+    <li class="nav"><a href="services.html">Services</a></li>
+    <li class="nav"><a href="careers.html">Careers</a></li>
+    <li class="nav"><a href="events.html">Events</a></li>
+    <li class="nav"><a href="about.html">About Us</a></li>
+    <li class="nav"><a href="homepage.html">Home</a></li> 
+</ul>
+
+    </head>
+    <body>
+    <br>
+    <h1>Services</h1>
+    
+    <div class="services">
+        <div style="display: inline-block; text-align: center">
+        <a href="#groom"> 
+            <img class="service_type" src="groom.jpg" alt="Grooming"/>
+        </a> 
+        <p> Grooming </p>
+        </div>
+        <div style="display: inline-block; text-align: center">
+        <a href="#bath"> 
+            <img class="service_type" src="bath.jpg" 
+            alt= "Bath"/>
+        </a> 
+        <p> Baths </p>
+        </div>
+        <div style="display: inline-block; text-align: center">
+        <a href="#teeth">  
+            <img class="service_type" src="teeth.jpg" 
+            alt= "Teeth Cleaning"/>
+        </a> 
+        <p> Teeth Cleaning </p>
+        </div>
+        <div style="display: inline-block; text-align: center">
+        <a href="#nails"> 
+            <img class="service_type" src="trim.jpg" 
+            alt= "Nail Trim"/>
+        </a> 
+        <p> Nail Trimming </p>
+        </div>
+    </div>  
+    <script language="javascript">
+    $(document).ready(function(){
+      $("#Btn1").click(function(){
+          $("#groom_times").fadeIn().css("display","inline-block");
+      });
+      $("#schedule1").change(function(){
+          $("#confirmation1").fadeIn().css("display","inline-block");
+      });
+    });
+    </script>  
+    <div id="groom">
+        <h2>Grooming</h2>
+        <p>We provide top-quality grooming for dogs of all breeds and sizes. 
+        </br> What's included:</p>
+        <ul>
+            <li> Cut and Style </li>
+            <li> Shampoo </li>
+            <li> Blow-dry </li>
+            <li> Brushout </li>
+            <li> Nail Trim </li>
+        </ul> 
+        </br> Pricing: </br> </p>
+        <ul>
+            <li> Regular: $100</li>
+            <li> Deluxe: $165 </li>
+        <ul>    
+        
+        <span id="Btn1" class ="bookBtn">Book now</span>
+        <div class="times" id="groom_times">
+            <form name="times_form">
+                <select name="schedule" id="schedule1">
+                    <option selected disabled>Select a date and time:</option>
+                    <option>3/16 at 10 am</option>
+                    <option>3/16 at 11 am</option>
+                    <option>3/16 at 12 am</option>
+                    <option>3/17 at 10 am</option>
+                    <option>3/17 at 11 am</option>
+                    <option>3/18 at 10 am</option>
+                    <option>3/18 at 11 am</option>
+                    <option>3/19 at 12 am</option>
+                    <option>3/19 at 10 am</option>
+                    <option>3/19 at 11 am</option>
+                </select>
+            </form>
+        </div>
+        <p id="confirmation1" class="confirmation" style="display: none">Appointment Booked!</p>
+    </div>
+    <script language="javascript">
+    $(document).ready(function(){
+      $("#Btn2").click(function(){
+          $("#bath_times").fadeIn().css("display","inline-block");
+      });
+      $("#schedule2").change(function(){
+          $("#confirmation2").fadeIn().css("display","inline-block");
+      });
+    });
+    </script>  
+    <div id="bath">
+        <h2>Baths</h2>
+        <p> We provide top-quality Baths for dogs of all breeds and sizes. 
+        </br> Pricing: </br> </p>
+        <ul>
+            <li> Bath: $50</li>
+            <li> Bubble Bath: $65 </li>
+        <ul> 
+        <span id="Btn2" class ="bookBtn">Book now</span>
+        <div class="times" id="bath_times">
+            <form name="times_form">
+                <select name="schedule" id="schedule2">
+                    <option selected disabled>Select a date and time:</option>
+                    <option>3/16 at 10 am</option>
+                    <option>3/16 at 11 am</option>
+                    <option>3/16 at 12 am</option>
+                    <option>3/17 at 10 am</option>
+                    <option>3/17 at 11 am</option>
+                    <option>3/18 at 10 am</option>
+                    <option>3/18 at 11 am</option>
+                    <option>3/19 at 12 am</option>
+                    <option>3/19 at 10 am</option>
+                    <option>3/19 at 11 am</option>
+                </select>
+            </form>
+        </div>
+        <p id="confirmation2" class="confirmation" style="display: none">Appointment Booked!</p>
+    </div>
+
+    <script language="javascript">
+    $(document).ready(function(){
+      $("#Btn3").click(function(){
+          $("#teeth_times").fadeIn().css("display","inline-block");
+      });
+      $("#schedule3").change(function(){
+          $("#confirmation3").fadeIn().css("display","inline-block");
+      });
+    });
+    </script>
+    <div id="teeth">
+        <h2>Teeth Cleaning</h2>
+        <p> We provide top-quality Teeth Cleaning for dogs of all breeds and sizes. 
+        </br> Pricing: </br> </p>
+        <ul>
+            <li> Cleaning: $10</li>
+            <li> Cleaning and Breath Refresh: $15 </li>
+        <ul> 
+        <span id ="Btn3" class ="bookBtn">Book now</span>
+        <div class="times" id="teeth_times">
+            <form name="times_form">
+                <select name="schedule" id="schedule3">
+                    <option selected disabled>Select a date and time:</option>
+                    <option>3/16 at 10 am</option>
+                    <option>3/16 at 11 am</option>
+                    <option>3/16 at 12 am</option>
+                    <option>3/17 at 10 am</option>
+                    <option>3/17 at 11 am</option>
+                    <option>3/18 at 10 am</option>
+                    <option>3/18 at 11 am</option>
+                    <option>3/19 at 12 am</option>
+                    <option>3/19 at 10 am</option>
+                    <option>3/19 at 11 am</option>
+                </select>
+            </form>
+        </div>
+        <p id="confirmation3" class="confirmation" style="display: none">Appointment Booked!</p>
+
+    </div>
+    <script language="javascript">
+    $(document).ready(function(){
+      $("#Btn4").click(function(){
+          $("#nail_times").fadeIn().css("display","inline-block");
+      });
+      $("#schedule4").change(function(){
+          $("#confirmation4").fadeIn().css("display","inline-block");
+      });
+    });
+    </script>
+    <div id="nails">
+        <h2>Nail Trimming</h2>
+        <p> We provide top-quality nail trimming for dogs of all breeds and sizes. 
+        </br> Pricing: </br> </p>
+        <ul>
+            <li> Trim: $10</li>
+            <li> Trim and Buff: $15 </li>
+        <ul>       
+        <span class ="bookBtn" id="Btn4">Book now</span>
+        <div class="times" id="nail_times">
+            <form name="times_form">
+                <select name="schedule" id="schedule4">
+                    <option selected disabled>Select a date and time:</option>
+                    <option>3/16 at 10 am</option>
+                    <option>3/16 at 11 am</option>
+                    <option>3/16 at 12 am</option>
+                    <option>3/17 at 10 am</option>
+                    <option>3/17 at 11 am</option>
+                    <option>3/18 at 10 am</option>
+                    <option>3/18 at 11 am</option>
+                    <option>3/19 at 12 am</option>
+                    <option>3/19 at 10 am</option>
+                    <option>3/19 at 11 am</option>
+                </select>
+            </form>
+        </div>
+        <p id="confirmation4" class="confirmation" style="display: none">Appointment Booked!</p>
+    </div>
+    <br><br>
+    <footer>
+      <p>© 2022 Paw Friends Grooming Services</p>
+    </footer>
+    </body>
+<html>
