@@ -1,0 +1,75 @@
+----------------------------------------------------------------------
+|                      CS 15 HOMEWORK 1: LISTS                       |
+| Harry Ahearn                                                             |
+| 9/28/21                                                            |
+----------------------------------------------------------------------
+
+                           ---- PURPOSE ----
+This program offers two different lists that store characters. They
+maintain the stored characters in their given order, with some extra
+features, such as the ability to concatenate lists.
+
+                      ---- ACKNOWLEDGEMENTS ----
+Help from instructor on piazza. I was given advice on how to look for memory 
+leaks.
+
+                            ---- FILES ----
+CharArrayList.cpp - this is the implementation of the CharArrayList class.
+It contains multiple constructors, a destructor, many ways to edit the AL
+using functions, and ways to access variables such as the size() function.
+
+CharArrayList.h - the is the header file for the CAL class. It features all 
+public functions as well as private member variables.
+
+CharLinkedList.h - this is the header file for the CLL class. It features all
+public functions as well as private member variables, such as Node *prev, *next
+int len as well as a declaration of struct Node.
+
+CharLinkedList.cpp - this is the implementation of the CLL class. It allows for 
+many ways to construct and edit linked lists and acccess to private variables
+through the use of getters. 
+
+unit_test.h - this is a header file used by the Makefile. This file contains
+functions used for testing the CAL and CLL classes for memory leaks and 
+errors as well as accuracy.
+
+                 ---- COMPILE / RUN INSTRUCTIONS ----
+Simply type "unit_test" to run the unit tests for the CharArrayList
+and CharLinkedList classes. This folder contains no driver, or
+application, besides the unit tests for the list classes.
+
+                ---- DATA STRUCTURES / ALGORITHMS ---- 
+doubly linked lists - this data structure has the advantages of a list as well
+as many other advantages. For instance, it is more memory efficient than 
+arraylists while still being scalable. It is also quicker to expland in LLs but 
+expansion occurs more often. Doubly linked lists off the advantage of being 
+able to see the nodes directly behind the current node. This makes for an 
+overall more usable data structure but is more difficult to implement and is
+not more useful for every use case. In this specific case, I think it is 
+unnceccesary as we provide no functions that really utilize the ability to
+travel backwards thru the list. However, it would have use in a more complete
+implementation of strings. 
+
+arraylists - this data structure has the advantages of lists while being 
+scalable, and easy to implement. It is not as memory efficient as LLs as it 
+allocates large amounts of memory that may or may not be used. Yet, it is
+faster to add to the end in all cases except for when the ALs needs to expand 
+which is increasingly uncommon for larger and larger ALs. It is also quicker to 
+delete entries but slower to insert entries into arbitrary points in the list
+than LLs.
+
+                           ---- TESTING ----
+I tested this assignment by creating unit tests. After making every function 
+I would immediately test it and correct any errors. I did this for each 
+function and grouped small and similar functions together. For the LL class, I 
+had to do an extensive amount of testing to try and find a memory leak that was 
+affecting 7 unit tests. After assuming something was wrong with my destructor,
+I realized that the destructor had no leaks and that all of the unit tests 
+shared the same constructor by happenstance. From there I went line by line 
+in that constructor until I realized that I was missing a delete statement that
+I assumed was unnceccesary. 
+
+                         ---- TIME SPENT ----
+                             6.5 hours
+
+        
