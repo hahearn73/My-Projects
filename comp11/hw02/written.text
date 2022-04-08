@@ -1,0 +1,50 @@
+Harry Ahearn 2/19/21
+
+Written 1:
+- make constants W_PER_BIKE, L_PER_BIKE, F_PER_BIKE
+- ask for number of wheels
+- store as number of wheels
+- ask for numFrames
+- store as number of frames
+- ask for number of links
+- store as numLinks
+- divide each num variable by their respective constants and store as new
+  variable, smallest answer is 
+  total bikes possible 
+- output amount of bikes possible and remaining parts by subtracting constants
+  * division result from variable for each part respectively
+
+Written 2:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int age=50;
+    age = age + 50;
+    string name = "Sally";
+    string job = "Super Star";
+    
+    if(name == "Sally" && job == "Super Star") {
+        cout << "Hi Sally" << endl;
+        cout << "You are a super star!!" << endl;
+        
+        if(age == 100 || (age != 42 && name != job)) { 
+            cout << "Have a nice day!" << endl;
+        }
+    } 
+    else {
+        cout << "This isn't Sally...Goodbye!!" << endl;
+    }
+    
+    return 0;
+}
+
+Written 3:
+I tested the rps program by repeating the program until I got every possible 
+result. This was done by first only inputting r until I got all 3 possible 
+results and repeating this for p and s. 
+
+Written 4:
+2-3 hours 

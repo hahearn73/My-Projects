@@ -1,0 +1,23 @@
+Harry Ahearn 2/15/21
+Written 1 pseudocode 
+if integer is below 0, save that as a boolean isNegative and multiply the 
+integer by -1
+if integer is >= 100, report it has 3 digits and if its negative or not based
+on the boolean
+if integer is < 100 but > 10 report it has 2 digits and if its negative based 
+on the boolean
+if integer is > 10 report it has 1 digit and if its negative based on the
+boolean
+
+Written 2
+A problem I had while compiling was that there was an error with the way I 
+declared a boolean value. I am used to writing boolean x rather than bool x and
+was very confused at first how there could be something wrong with seemingly
+simple code. I skimmed over the error message and looked for a simple reason 
+and noticed the message said boolean isNegative was incorrect and that 
+isNegative had not been declared in a later line. This led me to the conclusion
+that the way I declared isNegative was false. I guessed that it needed to say 
+bool isNegative and recompiled with no errors.
+
+Written 3
+1 hour

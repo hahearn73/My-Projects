@@ -1,0 +1,29 @@
+Script started on Sun 07 Feb 2021 02:45:56 PM EST
+vm-hw01{hahear01}51: hostname
+vm-hw01
+vm-hw01{hahear01}52: who
+klin04   pts/3        2021-02-07 14:39 (10.245.58.174)
+hahear01 pts/5        2021-02-07 14:45
+hahear01 pts/6        2021-02-07 14:41 (10.245.58.99)
+kdevko01 pts/7        2021-02-07 09:50 (c-66-31-23-132.hsd1.ma.comcast.net)
+dtrejo01 pts/8        2021-02-07 14:43 (10.245.79.247)
+pkang03  pts/9        2021-02-07 13:58 (pool-108-26-197-247.bstnma.fios.verizon.net)
+vm-hw01{hahear01}53: w
+ 14:46:06 up 23 days, 20:46,  6 users,  load average: 0.00, 0.02, 0.05
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+klin04   pts/3    10.245.58.174    14:39    6:22   0.10s  0.10s -tcsh
+hahear01 pts/5                     14:45    6.00s  0.06s  0.01s w
+hahear01 pts/6    10.245.58.99     14:41    6.00s  0.11s  0.00s script
+kdevko01 pts/7    c-66-31-23-132.h 09:50   24:38   6.70s  6.59s ssh -X kdevko01
+dtrejo01 pts/8    10.245.79.247    14:43    2:14   0.11s  0.11s -tcsh
+pkang03  pts/9    pool-108-26-197- 13:58   19:58   0.13s  0.13s -tcsh
+vm-hw01{hahear01}54: pwd
+/h/hahear01/comp11/hw00
+vm-hw01{hahear01}55: ls -l
+total 4
+-rw-------. 1 hahear01 games 245 Feb  7 14:43 hello.cpp
+-rw-------. 1 hahear01 games   0 Feb  7 14:45 typescript
+vm-hw01{hahear01}56: exit
+exit
+
+Script done on Sun 07 Feb 2021 02:46:10 PM EST
