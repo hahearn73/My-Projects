@@ -4,6 +4,7 @@ mark_checker.c can be used to check if a file has been marked by wave_marker.c
 Tested on 8 bit files, would work for 16 bit but would need a modification so that every other byte is marked rather than every byte.
 
 example usage (assuming wave_marker.c and mark_checker.c have been compiled to executables mark and check, respectively)
+
 $ ./mark example.wav > output.wav
 $ ./check output.wav
 marked
