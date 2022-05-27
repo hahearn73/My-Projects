@@ -14,7 +14,7 @@ int is_marked (FILE *fp, int size);
 int main(int argc, char **argv)
 {
     if (argc != 2) {
-        printf("Usage: ./mark file\n"); /* assumes executable is mark */
+        printf("Usage: ./check file\n"); /* assumes executable is check */
         return -1;
     }
     FILE *fp = fopen(argv[1], "r");
