@@ -1,3 +1,7 @@
+/* Harry Ahearn
+ * checks 8 bit wav files for a water marking as specified in wave_marker.c
+ */
+
 #include <stdio.h>
 #include <stdint.h>
 
