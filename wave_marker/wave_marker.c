@@ -1,9 +1,7 @@
-
 /* Harry Ahearn
  * watermarks 8 bit wav files. maps each byte in data chunk as byte | 1
  */
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdint.h>
 
 #define SUBCHUNK2_START 40
@@ -30,6 +28,8 @@ int main(int argc, char **argv)
     }
     print_header(fp);
     print_masked(fp, get_size(fp));
+    fclose(fp);
+    return 0;
 }
 
 /* copy_header
@@ -48,7 +48,7 @@ void print_header (FILE *fp)
 
 /* get_size
  * returns number of bytes in data chunk of wav file
- * assumes file position is properly set
+ * assumes file position is properly set to SUBCHUNK2_START
  * SIDE EFFECT: prints subchunk2size to stdout,
  *              sets position pointer of fp to 44
  */
