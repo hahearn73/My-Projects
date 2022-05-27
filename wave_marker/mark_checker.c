@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 /* get_size
  * returns number of bytes in data chunk of wav file
  * assumes file position is properly set to SUBCHUNK2_START
- * SIDE EFFECT: sets position pointer of fp to 44
+ * SIDE EFFECT: sets position pointer of fp to SUBCHUNK2_END
  */
 int get_size (FILE *fp)
 {
