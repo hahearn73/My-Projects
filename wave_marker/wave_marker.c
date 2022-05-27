@@ -7,7 +7,7 @@
 #include <stdint.h>
 
 #define SUBCHUNK2_START 40
-#define SUBCHUNK2_END 44
+#define SUBCHUNK2_END   44
 
 void print_header (FILE *fp);
 int  get_size     (FILE *fp);
